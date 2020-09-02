@@ -51,4 +51,4 @@ function stopGame() {
 
 //fix adding only one bit at a time
 //fix position update from the back of the array
-//add basically the whole game 
+//add basically the whole game
