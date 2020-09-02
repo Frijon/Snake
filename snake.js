@@ -20,7 +20,6 @@ class Snake {
 					snake[snake.length -1 - i].pos.x = snake[snake.length - 2].pos.x;
 					snake[i].pos.y = snake[i + 1].pos.y;
 
-					//fix bit position update
 				}
 			}
 
