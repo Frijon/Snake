@@ -16,10 +16,7 @@ function setup() {
 function draw() {
 	gameRunning = true;
 	background(0, 0, 0);
-	keyPressed();
-	console.log("snake.length = " + snake.length);
 	for (let i = 0; i < snake.length; ++i){
-		console.log("i = " + i);
 		snake[i].update();
 		snake[i].draw();
 	}
