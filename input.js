@@ -14,7 +14,7 @@ function keyPressed() {
 			dir = "right";
 			break;
 		case 71:
-			addbit();
+			Snake.addbit();
 			break;
 	}
 	return false;
