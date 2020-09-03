@@ -2,6 +2,7 @@ let canvas;
 let gameRunning;
 let frame;
 let snake = [];
+var dir = "";
 
 const GAME_WIDTH = 800;
 const GAME_HEIGHT = 500;

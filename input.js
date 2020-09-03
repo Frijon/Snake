@@ -2,16 +2,16 @@ function keyPressed() {
 
 	switch (keyCode) {
 		case UP_ARROW:
-			snake[0].dir = "up";
+			dir = "up";
 			break;
 		case DOWN_ARROW:
-			snake[0].dir = "down";
+			dir = "down";
 			break;
 		case LEFT_ARROW:
-			snake[0].dir = "left";
+			dir = "left";
 			break;
 		case RIGHT_ARROW:
-			snake[0].dir = "right";
+			dir = "right";
 			break;
 		case 71:
 			addbit();
