@@ -10,34 +10,13 @@ class Snake {
 		}
 	}
 
-	// update() {
-	// 	if ((frame % 20) == 0) {
-	// 		for (let i = 0; i < snake.length -1; i++) {
-	// 			//giving position from front to back
-	// 			snake[i].pos.x = snake[i + 1].pos.x;
-	// 			snake[i].pos.y = snake[i + 1].pos.y;
-	// 		}
-	//
-	// 		switch (dir) {
-	// 			case "left":
-	// 				snake[snake.length -1].pos.x += -10;
-	// 				break;
-	// 			case "right":
-	// 				snake[snake.length -1].pos.x += 10;
-	// 				break;
-	// 			case "up":
-	// 				snake[snake.length -1].pos.y += -10;
-	// 				break;
-	// 			case "down":
-	// 				snake[snake.length -1].pos.y += 10;
-	// 				break;
-	// 			}
-	// 			//control loop
-	// 		for (let i = 0; i < snake.length; ++i){
-	// 			console.log("snake[" + [i] +"].pos.x, y = " + snake[i].pos.x + ", " + snake[i].pos.y);
-	// 		}
-	// 	}
-	// }
+	update(gameWidth, gameHeight){
+		if ((this.pos.x + this.width) <= 0 || (this.pos.x) >= gameWidth || (this.pos.y + this.height) <= 0 || (this.pos.y) >= gameHeight) {
+			alert("You lost!");
+			// stopGame();
+			restartGame();
+		}
+	}
 
 	draw() {
 		fill(255);

@@ -3,6 +3,8 @@ let frame;
 let snake = [];
 var dir = "";
 
+
+
 const GAME_WIDTH = 800;
 const GAME_HEIGHT = 500;
 
@@ -15,35 +17,34 @@ function setup() {
 
 function draw() {
 	background(0);
-		if ((frame % 20) == 0) {
-			for (let i = 0; i < snake.length -1; i++) {
-				//giving position from front to back
-				snake[i].pos.x = snake[i + 1].pos.x;
-				snake[i].pos.y = snake[i + 1].pos.y;
-			}
+	if ((frame % 20) == 0) {
+		for (let i = 0; i < snake.length -1; i++) {
+			//giving position from front to back
+			snake[i].pos.x = snake[i + 1].pos.x;
+			snake[i].pos.y = snake[i + 1].pos.y;
+		}
 
-			switch (dir) {
-				case "left":
-					snake[snake.length -1].pos.x += -10;
-					break;
-				case "right":
-					snake[snake.length -1].pos.x += 10;
-					break;
-				case "up":
-					snake[snake.length -1].pos.y += -10;
-					break;
-				case "down":
-					snake[snake.length -1].pos.y += 10;
-					break;
-			}
-			// //control loop
-			// for (let i = 0; i < snake.length; ++i){
-			// 	console.log("snake[" + [i] +"].pos.x, y = " + snake[i].pos.x + ", " + snake[i].pos.y);
-			// }
+		switch (dir) {
+			case "left":
+				snake[snake.length -1].pos.x += -10;
+				break;
+			case "right":
+				snake[snake.length -1].pos.x += 10;
+				break;
+			case "up":
+				snake[snake.length -1].pos.y += -10;
+				break;
+			case "down":
+				snake[snake.length -1].pos.y += 10;
+				break;
 		}
-		for (let i = 0; i < snake.length; i++){
-			snake[i].draw();
-		}
+	}
+
+	for (let i = 0; i < snake.length; i++){
+		snake[i].draw();
+	}
+	
+	snake[snake.length - 1].update(GAME_WIDTH, GAME_HEIGHT);
 
 	frame %= 20;
 	frame += 1;
