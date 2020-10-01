@@ -22,7 +22,7 @@ class Snake {
 		//fix 
 		//
 		// }
-
+		}
 	}
 
 	draw() {
