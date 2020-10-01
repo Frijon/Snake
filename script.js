@@ -3,8 +3,6 @@ let frame;
 let snake = [];
 var dir = "";
 
-
-
 const GAME_WIDTH = 800;
 const GAME_HEIGHT = 500;
 
@@ -42,9 +40,8 @@ function draw() {
 
 	for (let i = 0; i < snake.length; i++){
 		snake[i].draw();
+		snake[i].update(GAME_WIDTH, GAME_HEIGHT, i);
 	}
-	
-	snake[snake.length - 1].update(GAME_WIDTH, GAME_HEIGHT);
 
 	frame %= 20;
 	frame += 1;
